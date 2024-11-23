@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background: radial-gradient(circle, #0f0f0f, #000000);
+    color: #00ff88;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin: 20px 0;
+    color: #00ff88;
+    text-shadow: 0 0 15px #00ff88, 0 0 30px #00ff88;
+    animation: hacking-glow 2s infinite alternate;
+}
+
+@keyframes hacking-glow {
+    from {
+        text-shadow: 0 0 7px #00ff88, 0 0 20px #00ff88;
+    }
+    to {
+        text-shadow: 0 0 15px #00ff88, 0 0 40px #00ff88;
+    }
+}
+
+.container {
+    width: 90%;
+    max-width: 700px;
+    height: 65vh;
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid #00ff88;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.2);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+textarea {
+    width: 95%;
+    height: 73%;
+    background: rgba(0, 0, 0, 0.9);
+    border: 2px solid #00ff88;
+    border-radius: 8px;
+    color: #00ff88;
+    font-size: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 15px;
+    resize: none;
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+textarea:focus {
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.6);
+    border-color: #00ff88;
+}
+
+textarea::placeholder {
+    color: rgba(0, 255, 136, 0.5);
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #000000;
+    background: linear-gradient(90deg, #00ff88, #007755);
+    border: 2px solid #00ff88;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+}
+
+button:hover {
+    background: linear-gradient(90deg, #007755, #00ff88);
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(2px);
+    box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+}
+
+/* Scrollbar Styling */
+textarea::-webkit-scrollbar {
+    width: 8px;
+}
+
+textarea::-webkit-scrollbar-track {
+    background: #0f0f0f;
+}
+
+textarea::-webkit-scrollbar-thumb {
+    background: #00ff88;
+    border-radius: 8px;
+}
+
+textarea::-webkit-scrollbar-thumb:hover {
+    background: #007755;
+}
